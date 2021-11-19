@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Information</title>
+<style>
+    p {
+    margin-bottom: 0px;
+  }
+  
+  h2 {
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #222;
+    font-family: Poppins;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  h1 {
+    position: absolute;
+    font-weight: 700;
+    font-size: 174px;
+    color: #fff;
+    opacity: 0.5;
+    right: 150px;
+    top: 45px;
+    top: -149px;
+    z-index: 9;
+  }
+  
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #BFD8B8;
+    background: #BFD8B8;
+    font-weight: 600;
+    font-family: Poppins;
+    margin: 0px;
+  }
+  
+  .main {
+    padding: 150px 0;
+    position: relative;
+  }
+  
+  h1 {
+    position: absolute;
+    font-weight: 700;
+    font-size: 174px;
+    color: #F1F7E7;
+    opacity: 0.5;
+    right: 105px;
+    top: 45px;
+    top: -149px;
+    z-index: 9;
+  }
+  
+  .container {
+    width: 520px;
+    background: #E7EAB5;
+    margin: 0 auto;
+    box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 0px 10px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+  }
+  
+  .info-content {
+    padding: 40px 60px 32px 60px;
+    position: relative;
+    z-index: 99;
+  }
+  
+  h3{
+    font-family: Poppins;
+    color:#345B63;
+    align-content: center;
+    font-size: 1.5em;
+  }
+  
+  .form-title {
+    font-family: Poppins;
+    color: #345B63;
+  }
+  
+  .information {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 5px;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #345B63;
+  }
+  
+  select{
+    padding: 5px;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #345B63;
+    font-family: Poppins;
+    color: #345B63;
+      font-size: 15px;
+      font-weight: bolder;
+  }
+  option {
+    width: 120px;
+    height: 20px;
+    border: 1px solid #999;
+    font-size: 15px;
+    color: #1c87c9;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 4px 4px #ccc;
+  }
+  
+  input::placeholder {
+      font-family: Poppins;
+    color: #345B63;
+      font-size: 15px;
+      font-weight: bolder;
+  }
+  
+  button {
+    padding: 10px 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    background: #39A2DB;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  button:hover {
+    background: #85d6de;
+  }
+  
+</style>
+    <!-- <link rel="stylesheet" href="ds2\static\css\styles.css"> -->
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="info-content">
+                <form action="{{ url_for('predict')}}" method="POST" class="info-form">
+                    <h2 class="form-title">Kindly fill up the following form</h2>
+							<div class="information">
+          						<input type="text" name="TV" placeholder="TV">
+          						<input type="text" name="radio" placeholder="Radio">
+								      <input type="text" name="newspaper" placeholder="Newspaper">            
+        			</div>
+							<button type="submit" >Predict</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
